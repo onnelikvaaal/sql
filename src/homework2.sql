@@ -62,3 +62,8 @@ WHERE (
           SELECT count(*) FROM employee
           WHERE first_name = e.first_name) > 1
 GROUP BY first_name;
+
+/*task 2.4.1*/
+SELECT first_name, MAX(age) FROM employee
+GROUP BY first_name
+HAVING COUNT(first_name) > 1;
